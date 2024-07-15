@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tam giác</title>
+    <script>
+        function checkTriangle() {
+            var a = parseFloat(document.getElementById("a_tri").value);
+            var b = parseFloat(document.getElementById("b_tri").value);
+            var c = parseFloat(document.getElementById("c_tri").value);
+
+            var result = "";
+
+            if (a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a) {
+                result = "Đây là một tam giác.";
+                if (a === b && b === c) {
+                    result += " Đây là tam giác đều.";
+                } else if (a * a === b * b + c * c || b * b === a * a + c * c || c * c === a * a + b * b) {
+                    result += " Đây là tam giác vuông.";
+                }
+            } else {
+                result = "Đây không phải là tam giác.";
+            }
+
+            document.getElementById("ketqua_tri").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+
+<h1>Kiểm tra tam giác</h1>
+
+
+
+        <label for="a_tri">Nhập cạnh a:</label>
+        <input type="number" id="a_tri">
+<br>
+        <label for="b_tri">Nhập cạnh b:</label>
+        <input type="number" id="b_tri">
+<br>
+        <label for="c_tri">Nhập cạnh c:</label>
+        <input type="number" id="c_tri">
+<br>
+    <button onclick="checkTriangle()">Kiểm tra</button>
+<br>
+        <p id="ketqua_tri"></p>
+
+</div>
+
+</body>
+</html>

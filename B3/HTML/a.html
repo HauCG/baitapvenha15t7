@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Chu vi và Diện tích Hình vuông</title>
+    <script>
+        function calculateSquare() {
+            var canh = parseFloat(document.getElementById("canh").value);
+                var chuvi = 4 * canh;
+                var dientich = canh * canh;
+                document.getElementById("chuvi").innerText = `Chu vi: ${chuvi}`;
+                document.getElementById("dientich").innerText = `Diện tích: ${dientich}`;
+        }
+    </script>
+</head>
+<body>
+
+<h1>Tính Chu vi và Diện tích Hình vuông</h1>
+
+<label for="canh">Nhập độ dài cạnh:</label>
+<input type="number" id="canh">
+
+<button onclick="calculateSquare()">Tính</button>
+
+<p id="chuvi"></p>
+<p id="dientich"></p>
+
+</body>
+</html>

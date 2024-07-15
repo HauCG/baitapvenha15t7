@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Tổng các số từ a đến b</title>
+
+</head>
+<body>
+<h1>Tính Tổng các số từ a đến b</h1>
+
+<label for="start">Nhập số bắt đầu (a):</label>
+<input type="number" id="start">
+
+<label for="end">Nhập số kết thúc (b):</label>
+<input type="number" id="end">
+
+<button onclick="calculateSum()">Tính</button>
+
+<script>
+    function calculateSum() {
+        var start = parseInt(document.getElementById("start").value);
+        var end = parseInt(document.getElementById("end").value);
+        var sum = 0;
+
+        for (var i = start; i <= end; i++) {
+            sum += i;
+        }
+
+        document.getElementById("tong").innerText = `Tổng từ ${start} đến ${end} là ${sum}`;
+    }
+</script>
+
+<p id="tong"></p>
+
+</body>
+</html>

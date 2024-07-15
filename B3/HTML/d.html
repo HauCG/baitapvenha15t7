@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi năm ra thế kỷ</title>
+    <script>
+        function calculateCentury() {
+            var year = parseInt(document.getElementById("year").value);
+            var century = year / 100
+            document.getElementById("theky").value = century
+        }
+    </script>
+</head>
+<body>
+
+<h1>Đổi năm ra thế kỷ</h1>
+
+
+
+        <label for="year">Nhập năm:</label>
+        <input type="number" id="year">
+
+    <button onclick="calculateCentury()">Đổi</button>
+
+        <label for="theky">Thế kỷ:</label>
+        <input type="text" id="theky" readonly>
+
+
+</body>
+</html>
